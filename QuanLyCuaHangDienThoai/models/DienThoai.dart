@@ -45,7 +45,7 @@ class DienThoai{
 
   //setter 
   set maDT(String maDT){
-    if(maDT.isNotEmpty || maDT.startsWith("DT-")){
+    if(maDT.isEmpty || !maDT.startsWith("DT-")){
       throw Exception("Mã điện thoại phải có định dạng 'DT-XXX' và không được rỗng");
     }
     _maDT = maDT;
@@ -130,3 +130,4 @@ void main() {
   }
 
 }
+
